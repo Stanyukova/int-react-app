@@ -102,16 +102,16 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
               <div className="header__menu">
                 <ul>
                   <li>
-                    <a href="#">О компании</a>
+                    <div>О компании</div>
                   </li>
                   <li>
-                    <a href="#">Доставка и оплата</a>
+                    <div>Доставка и оплата</div>
                   </li>
                   <li>
-                    <a href="#">Возврат</a>
+                    <div>Возврат</div>
                   </li>
                   <li>
-                    <a href="#">Контакты</a>
+                    <div>Контакты</div>
                   </li>
                 </ul>
               </div>
@@ -122,7 +122,7 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
           <div className="container">
             <div className="header__bottom-wrapper">
               <div>
-                <Link to="/"> <svg
+                <Link to="/int-react-app"> <svg
                   width="156"
                   height="66"
                   viewBox="0 0 156 66"
@@ -175,8 +175,8 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
                 </svg></Link>
                
               </div>
-              <div className="catalog">
-                <Link to="/">
+              <Link to="/int-react-app">
+              <div className="catalogw">
                   Каталог
                   <div>
                     <svg
@@ -204,8 +204,9 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
                       />
                     </svg>
                   </div>
-                </Link>
+                
               </div>
+              </Link>
               <Search searchValue={searchValue} setSearchValue={setSearchValue} />
               <div className="contacts">
                 <div className="contacts-main">
@@ -215,9 +216,9 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
                   <div className="worktime adress">
                     время работы: 9:00-20:00
                   </div>
-                  <a className="adress" href="">
+                  <div className="adress" >
                     Заказать звонок
-                  </a>
+                  </div>
                 </div>
                 <div className="contacts-main-pic">
                   <img width="70" src={contactPic} alt="" />
@@ -240,7 +241,7 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
                 </svg>
               </div>
               <div className="price catalog">
-                <a href="#">
+                <div className='catalogw'>
                   Прайс-лист
                   <div>
                     <svg
@@ -256,7 +257,7 @@ export const Header: React.FC<HeaderProps> =({searchValue,setSearchValue})=> {
                       />
                     </svg>
                   </div>
-                </a>
+                </div>
               </div>
               <div>
                 <svg

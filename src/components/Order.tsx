@@ -8,10 +8,10 @@ const Order:React.FC = () => {
         <div>
           <ul className="breadcrumbs-list">
             <li>
-              <Link to="/">Главная</Link>
+              <Link to="/int-react-app">Главная</Link>
             </li>
             <li>
-              <a href="">
+              <div>
                 <svg
                   width="2"
                   height="17"
@@ -26,10 +26,10 @@ const Order:React.FC = () => {
                     stroke-dasharray="2 2"
                   />
                 </svg>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="">Корзина</a>
+              <div>Корзина</div>
             </li>
           </ul>
         </div>

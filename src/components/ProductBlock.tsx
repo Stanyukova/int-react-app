@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { useDispatch } from "react-redux";
 import {addItem} from "../redux/slices/cartSlice";
 import { Link } from "react-router-dom";
-import { selectCartItemById } from '../redux/cart/selectors';
+// import { selectCartItemById } from '../redux/cart/selectors';
 import { CartItem } from '../redux/cart/types';
-type ProductBlock = {
+type ProductBlockProps = {
   title:string,
   barcode:string,
   imageUrl:string,
@@ -19,7 +19,7 @@ type ProductBlock = {
  
 }
 
-const ProductBlock:React.FC <ProductBlock>=({
+const ProductBlock: React.FC <ProductBlockProps>=({
   title,
   barcode,
   imageUrl,

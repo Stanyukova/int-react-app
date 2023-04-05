@@ -134,9 +134,9 @@ const Navbar: React.FC = () => {
                       </svg>
                     </div>
                     <div>
-                      <a className="adress call" href="#">
+                      <div className="adress call" >
                         Заказать звонок
-                      </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -145,21 +145,21 @@ const Navbar: React.FC = () => {
                   <div className="header__menu">
                     <ul>
                       <li>
-                        <a href="#">О компании</a>
+                        <div>О компании</div>
                       </li>
                       <li>
-                        <a href="#">Доставка и оплата</a>
+                        <div>Доставка и оплата</div>
                       </li>
                       <li>
-                        <a href="#">Возврат</a>
+                        <div>Возврат</div>
                       </li>
                       <li>
-                        <a href="#">Контакты</a>
+                        <div>Контакты</div>
                       </li>
                     </ul>
                   </div>
                   <div className="price catalog">
-                    <a href="#">
+                    <div>
                       Прайс-лист
                       <div>
                         <svg
@@ -175,7 +175,7 @@ const Navbar: React.FC = () => {
                           />
                         </svg>
                       </div>
-                    </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -260,7 +260,7 @@ const Navbar: React.FC = () => {
         <div className="container">
           <div className="mobile-catalog">
             <div>
-              <a className="mobile__catalog" href="">
+              <div className="mobile__catalog" >
                 <svg
                   width="15"
                   height="15"
@@ -286,7 +286,7 @@ const Navbar: React.FC = () => {
                   />
                 </svg>
                 Каталог
-              </a>
+              </div>
             </div>
             <div>
               <svg
@@ -305,7 +305,7 @@ const Navbar: React.FC = () => {
               </svg>
             </div>
             <div>
-              <a className="mobile__catalog" href="">
+              <div className="mobile__catalog" >
                 <svg
                   width="15"
                   height="15"
@@ -320,7 +320,7 @@ const Navbar: React.FC = () => {
                   />
                 </svg>
                 Поиск
-              </a>
+              </div>
             </div>
           </div>
         </div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Oggmenu from "./Oggmenu";
 import ProductBlock from "./ProductBlock";
-import Sidebar from "./Sidebar";
+// import Sidebar from "./Sidebar";
 import { Link } from "react-router-dom";
 import Sort from "./Sort";
 import Pagination from "./Pagination";
@@ -19,6 +19,7 @@ export const Main: React.FC<HeaderProps> = ({searchValue,setSearchValue})=> {
     
  }
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const arOptions:Array<string>   = ['Все', 'Laboratorium', 'Levrana','Lime', 'Mi&Ко','Купажъ', 'Твои Традиции'];
   const [value, setValue] = useState('');
   const options = arOptions.map((text, index:number) => {
@@ -34,7 +35,7 @@ export const Main: React.FC<HeaderProps> = ({searchValue,setSearchValue})=> {
   const [menu_class, setMenuClass] = useState("menu2 visible");
   const [interval_class, setIntervalClass] = useState("ogg");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
-  const [checked, setChecked] =  React.useState(false);
+  // const [checked, setChecked] =  React.useState(false);
   const [inputValuea, setInputValuea] =  React.useState("0");
   const [inputValueb, setInputValueb] =  React.useState("10000");
   const [items, setItems] = React.useState([]);
@@ -79,7 +80,7 @@ console.log(a)
         
        
       });
-  }, [categoryId, sortType, currentPage, value, inputValuea, inputValueb]);
+  }, [categoryId, sortType, currentPage, value, inputValuea, inputValueb, arOptions, num]);
 
  
 
@@ -104,10 +105,10 @@ console.log(a)
         <div className="breadcrumbs">
           <ul className="breadcrumbs-list">
             <li>
-              <a href="">Главная</a>
+              <div>Главная</div>
             </li>
             <li>
-              <a href="">
+              <div>
                 <svg
                   width="2"
                   height="17"
@@ -122,13 +123,13 @@ console.log(a)
                     stroke-dasharray="2 2"
                   />
                 </svg>
-              </a>
+              </div>
             </li>
             <li>
-              <Link to="/">Каталог</Link>
+              <Link to="/int-react-app">Каталог</Link>
             </li>
             <li>
-              <a href="">
+              <div>
                 <svg
                   width="2"
                   height="17"
@@ -143,10 +144,10 @@ console.log(a)
                     stroke-dasharray="2 2"
                   />
                 </svg>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="">Косметика и гигиена</a>
+              <div>Косметика и гигиена</div>
             </li>
           </ul>
         </div>

@@ -2,8 +2,8 @@ import React from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
 import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { addItem , minusItem} from "../redux/slices/cartSlice";
+// import { useDispatch} from "react-redux";
+// import { addItem , minusItem} from "../redux/slices/cartSlice";
 
 
 const ProductList: React.FC = () => {
@@ -17,7 +17,7 @@ const ProductList: React.FC = () => {
     weight: string;
     icon: string
   }>();
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const {totalPrice, items} = useSelector((data )=> data.cart)
 
 
@@ -37,7 +37,7 @@ const ProductList: React.FC = () => {
     }
 
     fetchProduct();
-  }, []);
+  }, [id]);
   if (!product) {
     return <>Загрузка...</>;
   }
@@ -61,7 +61,7 @@ const ProductList: React.FC = () => {
         <Link to="/">Главная</Link>
       </li>
       <li>
-        <a href="">
+        <div>
           <svg
             width="2"
             height="17"
@@ -76,13 +76,13 @@ const ProductList: React.FC = () => {
               stroke-dasharray="2 2"
             />
           </svg>
-        </a>
+        </div>
       </li>
       <li>
         <Link to="/">Каталог</Link>
       </li>
       <li>
-        <a href="">
+        <div>
           <svg
             width="2"
             height="17"
@@ -97,10 +97,10 @@ const ProductList: React.FC = () => {
               stroke-dasharray="2 2"
             />
           </svg>
-        </a>
+        </div>
       </li>
       <li>
-        <a href="">{product.title}</a>
+        <div>{product.title}</div>
       </li>
     </ul>
   </div>

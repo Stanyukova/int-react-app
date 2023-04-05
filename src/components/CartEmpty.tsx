@@ -11,7 +11,7 @@ const CartEmpty:React.FC = () => {
               <Link to="/">Главная</Link>
             </li>
             <li>
-              <a href="">
+              <div>
                 <svg
                   width="2"
                   height="17"
@@ -26,10 +26,10 @@ const CartEmpty:React.FC = () => {
                     stroke-dasharray="2 2"
                   />
                 </svg>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="">Корзина</a>
+              <div>Корзина</div>
             </li>
           </ul>
         </div>

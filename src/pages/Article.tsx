@@ -1,7 +1,7 @@
 import React from 'react'
 import ProductList from '../components/ProductList'
-import { useDispatch, useSelector } from "react-redux";
-const Article = () => {
+
+const Article : React.FC= () => {
  
   return (
   <div className="container">

@@ -4,9 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { clearItems, removeItem } from '../redux/slices/cartSlice';
 import CartEmpty from '../components/CartEmpty';
-import Order from '../components/Order';
 import { selectCart } from '../redux/cart/selectors';
-const Cart = () => {
+const Cart : React.FC= () => {
    
     const dispatch = useDispatch();
   const {totalPrice, items} = useSelector(selectCart)
@@ -38,7 +37,7 @@ if(!items) {
               <Link to="/">Главная</Link>
             </li>
             <li>
-              <a href="">
+              <div>
                 <svg
                   width="2"
                   height="17"
@@ -53,10 +52,10 @@ if(!items) {
                     stroke-dasharray="2 2"
                   />
                 </svg>
-              </a>
+              </div>
             </li>
             <li>
-              <a href="">Корзина</a>
+              <div>Корзина</div>
             </li>
           </ul>
         </div>

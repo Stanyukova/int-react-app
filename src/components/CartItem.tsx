@@ -1,6 +1,6 @@
 import React from "react";
 import { addItem , minusItem, removeItem} from "../redux/slices/cartSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 type CartItemProps = {
   id: string,

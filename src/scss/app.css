@@ -212,7 +212,7 @@ p {
   gap: 60px;
 }
 
-.catalog a {
+.catalogw {
   padding: 21px 54px;
   font-weight: 700;
   color: #ffffff;
@@ -223,7 +223,7 @@ p {
   gap: 12px;
 }
 
-.catalog a:hover {
+.catalogw :hover {
   background-color: rgba(63, 78, 101, 0.2470588235);
 }
 
@@ -315,7 +315,7 @@ p {
 }
 
 .price a {
-  padding: 21px 42px;
+  padding: 21px 22px;
 }
 
 .cart-content {

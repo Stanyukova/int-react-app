@@ -103,7 +103,7 @@ const Footer:React.FC = () => {
           <div className="footer__content">
             <div className="content-footer">Скачать прайс-лист:</div>
             <div className="price catalog">
-              <a href="">
+              <div>
                 Прайс-лист
                 <div>
                   <svg
@@ -119,7 +119,7 @@ const Footer:React.FC = () => {
                     />
                   </svg>
                 </div>
-              </a>
+              </div>
             </div>
             <div>Связь в мессенджерах:</div>
             <div className="net">
