@@ -5,6 +5,9 @@ type HeaderProps = {
   setSearchValue:any ;
 };
 export const Search: React.FC<HeaderProps> = ({searchValue,setSearchValue}) =>{
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+ setSearchValue(event.target.value)
+  }
   return (
     <div className="search">
      {searchValue &&( <svg
@@ -19,8 +22,9 @@ export const Search: React.FC<HeaderProps> = ({searchValue,setSearchValue}) =>{
         </svg>)}
       <input
         // ref={inputRef}
+        type='text'
         value={searchValue}
-        onChange={(event: React.ChangeEvent<HTMLInputElement>) => setSearchValue(event.target.value)}
+        onChange={handleChange}
         // className={styles.input}
         placeholder="Поиск..."
       />

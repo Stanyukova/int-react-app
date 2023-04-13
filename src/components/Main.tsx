@@ -103,7 +103,7 @@ console.log(pages)
 
 
   return (
-    <div className="main">
+    <div className="main" data-testid="main">
       <div className="container">
         <div className="breadcrumbs">
           <ul className="breadcrumbs-list">
@@ -189,7 +189,7 @@ console.log(pages)
 <div className="sidebarSort__price">
 <p>Цена ₸</p>
 <div className="sidebarSort__price-input">
-<input type="text" placeholder={inputValuea} onChange= {onInputValuea}/> - <input type="text" placeholder={inputValueb} onChange= {onInputValueb} />
+<input type="number" data-testid='priceValue' placeholder={inputValuea} onChange= {onInputValuea}/> - <input type="number" placeholder={inputValueb} onChange= {onInputValueb} />
 </div>
 <div className="line"></div>
 <div className="bold">Бренд</div>

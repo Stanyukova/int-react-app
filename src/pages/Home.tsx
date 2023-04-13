@@ -6,7 +6,7 @@ type HeaderProps = {
 };
 export const Home: React.FC<HeaderProps> = ({searchValue,setSearchValue}) => {
   return (
-    <div>
+    <div data-testid="main">
           <Main searchValue={searchValue} setSearchValue={setSearchValue}/>
     </div>
   )

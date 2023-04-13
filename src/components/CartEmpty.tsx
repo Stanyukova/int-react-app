@@ -8,7 +8,7 @@ const CartEmpty:React.FC = () => {
         <div>
           <ul className="breadcrumbs-list">
             <li>
-              <Link to="/">Главная</Link>
+              <Link to="/int-react-app" data-testid="main-link" >Главная</Link>
             </li>
             <li>
               <div>

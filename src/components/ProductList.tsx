@@ -55,7 +55,7 @@ const ProductList: React.FC = () => {
 
 
   return (
-    <div> <div className="breadcrumbs">
+    <div data-testid='product-item'> <div className="breadcrumbs">
     <ul className="breadcrumbs-list">
       <li>
         <Link to="/">Главная</Link>
@@ -106,7 +106,7 @@ const ProductList: React.FC = () => {
   </div>
   
   
-  <div className='productList'>
+  <div  className='productList'>
   
   <div className="productList__img">
   <img src={product.imageUrl} alt="" />
