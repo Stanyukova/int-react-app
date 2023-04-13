@@ -9,10 +9,10 @@ type SortProps = {
   onClickSort: (i:SortItem) => void;
 };
 export const list: SortItem[] = [
-{ name: 'цене (DESC)', sortProperty: 'price'},
-{ name: 'цене (ASC)', sortProperty:  '-price'},
-{ name: 'алфавиту (DESC)', sortProperty:'title' },
-{ name: 'алфавиту (ASC)', sortProperty: '-title' },
+{ name: 'по убыванию цены', sortProperty: 'price'},
+{ name: 'по возрастанию цены', sortProperty:  '-price'},
+{ name: 'по названию (от Я-А)', sortProperty:'title' },
+{ name: 'по названию (от А-Я)', sortProperty: '-title' },
 ];
 export const Sort: React.FC<SortProps> =({value, onClickSort}) =>{
     const [open, setOpen] = React.useState(false);

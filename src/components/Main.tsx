@@ -30,6 +30,7 @@ export const Main: React.FC<HeaderProps> = ({searchValue,setSearchValue})=> {
 
  });
  const num:any = {value}.value
+ const limit = 12;
 
 
   const [menu_class, setMenuClass] = useState("menu2 visible");
@@ -42,12 +43,8 @@ export const Main: React.FC<HeaderProps> = ({searchValue,setSearchValue})=> {
   const [categoryId, setCategoryId] = React.useState(11);
   const [currentPage, setCurrentPage] = React.useState(1);
   const [sortType, setSortType] = React.useState(
-    { name: 'цене (DESC)', sortProperty: 'price'},
-    //@ts-ignore
-    { name: 'цене (ASC)', sortProperty:  '-price'},
-    { name: 'алфавиту (DESC)', sortProperty:'title' },
-    { name: 'алфавиту (ASC)', sortProperty: '-title' },
-    { name: 'цена от', sortProperty: 'title' },
+    { name: 'по убыванию цены', sortProperty: 'price'},
+
   );
 
 function onInputValuea(event:React.ChangeEvent<HTMLInputElement>) {
@@ -68,7 +65,7 @@ console.log(a)
     const order = sortType.sortProperty.includes('-')? 'asc' : 'desc';
     const category= categoryId < 11 ? `typecare=${categoryId}` : '';
     const btand = value > "0" ? `brand=${arOptions[num]}` : '' ;
-    fetch(`https://642a9b1000dfa3b54749b441.mockapi.io/items?page=${currentPage}&limit=15&${category}&sortBy=${sortBy}&order=${order}&${btand}`)
+    fetch(`https://642a9b1000dfa3b54749b441.mockapi.io/items?page=${currentPage}&limit=${limit}&${category}&sortBy=${sortBy}&order=${order}&${btand}`)
       .then((res) => {
         return res.json();
       })
@@ -80,7 +77,8 @@ console.log(a)
         
        
       });
-  }, [categoryId, sortType, currentPage, value, inputValuea, inputValueb, arOptions, num]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryId, sortType, currentPage, value, inputValuea, inputValueb]);
 
  
 
@@ -97,6 +95,11 @@ console.log(a)
     setIsMenuClicked(!isMenuClicked);
   };
   console.log(items)
+
+//@ts-ignore
+let pages= parseInt(items.length/limit,10);
+console.log(pages)
+
 
 
   return (
@@ -232,7 +235,7 @@ console.log(a)
             ))}
            
           </div>
-         <Pagination  onChangePage={(number:number) => setCurrentPage(number)}/>
+         <Pagination  onChangePage={(number:number) => setCurrentPage(number)} />
           </div> 
         
         </div>
